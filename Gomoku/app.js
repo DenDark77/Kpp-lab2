@@ -18,12 +18,14 @@ var GameBox = blessed.box({
         type: 'line'
     },
     style: {
-        fg: 'white',
-        bg: '#00ff00',
+        fg: 'black',
+        bg: 'red',
+        color: 'black',
         border: {
             fg: 'white'
         },
     }
+
 });
 
 function ClearScreeen() {
@@ -43,8 +45,8 @@ var InfoBox = blessed.box({
         type: 'line'
     },
     style: {
-        fg: 'white',
-        bg: '#00ff00',
+        fg: 'black',
+        bg: 'red',
         border: {
             fg: 'white'
         }
@@ -60,7 +62,7 @@ var StatusText = blessed.box({
     top: Config.Tall + 2,
     height: 1,
     style: {
-        fg: "white",
+        fg: "black",
     }
 });
 
@@ -85,7 +87,7 @@ function FindFree(x, y, dirX, dirY) {
         }
 
         let resultChar = Game.Map.GetChar(resultX, resultY);
-        if (!resultChar /* | resultChar == Game.ActivePlayer.Char */ ) {
+        if (!resultChar) {
             return [resultX, resultY];
         }
     }
@@ -148,10 +150,10 @@ screen.on('keypress', function(key, data) {
         if (Game.Map.GetChar(Game.ActivePlayer.x, Game.ActivePlayer.y) != false) {
             return;
         }
-        program.bg("#5c5cff");
+        program.bg("red");
         program.write(Game.ActivePlayer.Char);
         program.left()
-        program.bg("!#5c5cff"); // is it right?
+        program.bg("!#5c5cff");
 
         Game.Map.SetChar(Game.ActivePlayer.x, Game.ActivePlayer.y, Game.ActivePlayer.Char);
 

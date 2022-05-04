@@ -6,7 +6,6 @@ class Player {
     x = 0;
     y = 0;
     Name = "Unnamed";
-
     constructor(Name, Char) {
         this.Name = Name;
         this.Char = Char;

@@ -1,8 +1,8 @@
 var Config = require("../config")
 class Map {
     Rows = {};
-    Wide = 40;
-    Tall = 40;
+    Wide = 10;
+    Tall = 10;
     constructor(Wide, Tall) {
         this.Wide = Wide;
         this.Tall = Tall;

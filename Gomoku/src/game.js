@@ -11,7 +11,7 @@ var Game = class {
 
         this.CallbackBox = CallbackBox;
 
-        this.Map = new Map(15, 15);
+        this.Map = new Map(10, 10);
 
         this.Ply1 = new Player(Config.Playername1, "X");
         this.Ply2 = new Player(Config.Playername2, "O");
